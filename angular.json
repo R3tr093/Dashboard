@@ -30,7 +30,6 @@
             ],
             "styles": [
               "src/styles.scss",
-              "/home/retro/GIT/Angular/Dashboard/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
