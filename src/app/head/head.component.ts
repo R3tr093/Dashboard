@@ -47,6 +47,12 @@ export class HeadComponent implements OnInit {
 
     document.getElementById('appClock').style.color = colors[random];
     document.getElementById('appClock').style.boxShadow = " 0px 4px 2px 4.3px " + colors[random];
+    document.getElementById('appClock').classList.remove("bounce");
+    document.getElementById('appClock').classList.add("shake");
+    
+    setTimeout(function(){
+      document.getElementById('appClock').classList.remove("shake");
+    },2000)
 
     
 
