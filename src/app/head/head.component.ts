@@ -45,7 +45,10 @@ export class HeadComponent implements OnInit {
     random = randomColor(colors.length)
 
 
-    document.getElementById('appClock').style.background = colors[random];
+    document.getElementById('appClock').style.color = colors[random];
+    document.getElementById('appClock').style.boxShadow = " 0px 4px 2px 4.3px " + colors[random];
+
+    
 
 
   }
