@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { mainService } from '../services/app.service';
 
+
 @Component({
   selector: 'app-head',
   templateUrl: './head.component.html',
@@ -17,8 +18,9 @@ export class HeadComponent implements OnInit {
 
     setInterval(
       () => {
-        this.Clock = new Date;
-        this.clockHour = this.Clock.getHours();
+        this.Clock = new Date();
+       
+        this.clockHour = this.Clock.getUTCHours() + 2;
     
       }, 1000
     );

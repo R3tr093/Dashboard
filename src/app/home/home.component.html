@@ -1,11 +1,16 @@
 <div id="main">
-    <app-box></app-box>
-    <app-box></app-box>
-    <app-box></app-box>
-    <app-box></app-box>
-    <app-box></app-box>
-    <app-box></app-box>
 
+    <app-box *ngFor="let box of Boxs; let i = index"
+          
+          [index]="i"
+    
+          >
+
+    </app-box>
+
+
+
+    
     
 
 </div>
