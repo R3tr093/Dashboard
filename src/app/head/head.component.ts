@@ -26,10 +26,25 @@ export class HeadComponent implements OnInit {
   ngOnInit() {
   }
 
-  refreshClock()
-  {
-    this.Clock = new Date;
-    
+  clockColors(){
+
+
+   
+   
+    let colors = ["#e83a43","#4cc5ed","#f2e572","#4f4d4d","hotpink"]
+
+    function randomColor(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    let random = randomColor(colors.length)
+
+    random = randomColor(colors.length)
+
+
+    document.getElementById('appClock').style.background = colors[random];
+
+
   }
 
 }
