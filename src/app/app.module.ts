@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { HeadComponent } from './head/head.component';
 import { FooterComponent } from './footer/footer.component';
 import { mainService } from './services/app.service';
+import { BoxComponent } from './box/box.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { mainService } from './services/app.service';
     AppComponent,
     HomeComponent,
     HeadComponent,
-    FooterComponent
+    FooterComponent,
+    BoxComponent
   ],
   imports: [
     BrowserModule,

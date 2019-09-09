@@ -3623,3 +3623,12 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+body
+{
+    background: url(assets/galaxy.png) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    
+}
