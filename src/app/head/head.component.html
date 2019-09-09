@@ -4,10 +4,19 @@
        
       </div>
       <div class="col-sm">
-        <h1 class="bounce animated" (click)="clockColors()" id="appClock"> {{Clock | date: 'hh'}} : {{Clock | date: 'mm'}} </h1>
+
+        
+        
+        <h1 class="bounce animated" (click)="clockColors()" id="appClock"> {{Clock | date: 'hh'}} : {{Clock | date: 'mm'}}
+            
+                <img style="width: 40px;height:auto;position: absolute; top: 20px; left: 20px;" src="../../assets/sun.gif" *ngIf="clockHour > 6">
+                <img style="width:40px;height:auto;position: absolute; top: 20px; left: 20px;" src="../../assets/moon.gif" *ngIf="clockHour > 18">
+        
+        </h1>
+        
       </div>
       <div class="col-sm">
-       
+        
       </div>
     </div>
 </div>

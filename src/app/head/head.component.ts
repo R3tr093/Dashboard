@@ -9,7 +9,8 @@ import { mainService } from '../services/app.service';
 })
 export class HeadComponent implements OnInit {
 
-  Clock: object = new Date();
+  Clock = new Date();
+  clockHour = this.Clock.getHours();
 
 
   constructor(private mainService: mainService) {
@@ -17,6 +18,8 @@ export class HeadComponent implements OnInit {
     setInterval(
       () => {
         this.Clock = new Date;
+        this.clockHour = this.Clock.getHours();
+    
       }, 1000
     );
     
