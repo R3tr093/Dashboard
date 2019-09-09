@@ -1,2 +1,4 @@
-<h1 class="bounce animated"> HEAD</h1>
+<h1 class="bounce animated"(click)="refreshClock()"> {{Clock | date: 'hh'}} : {{Clock | date: 'mm'}} </h1>
+
+<p>{{refreshClock()}}</p>
 
