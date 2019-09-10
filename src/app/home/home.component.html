@@ -3,6 +3,10 @@
     <app-box *ngFor="let box of Boxs; let i = index"
           
           [index]="i"
+
+          [title]="box.title"
+
+          [link]="box.link"
     
           >
 

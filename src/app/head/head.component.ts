@@ -12,6 +12,7 @@ export class HeadComponent implements OnInit {
 
   Clock = new Date();
   clockHour = this.Clock.getHours();
+  displayHours = "0";
 
 
   constructor(private mainService: mainService) {
@@ -21,6 +22,11 @@ export class HeadComponent implements OnInit {
         this.Clock = new Date();
        
         this.clockHour = this.Clock.getUTCHours() + 2;
+        
+        if(this.clockHour < 10)
+        {
+          this.displayHours = "0" + String(this.clockHour);
+        }
     
       }, 1000
     );

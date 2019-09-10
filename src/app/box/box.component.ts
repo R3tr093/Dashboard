@@ -8,8 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BoxComponent implements OnInit {
 
   @Input() index: number;
+  @Input() title: string;
+  @Input() link:  string;
 
-  constructor() { }
+
+  
+
+  constructor() {
+   }
 
   ngOnInit() {
   }
