@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeadComponent } from './head/head.component';
 import { FooterComponent } from './footer/footer.component';
-import { mainService } from './services/app.service';
+import { appService } from './services/app.service';
 import { BoxComponent } from './box/box.component';
 
       
@@ -30,7 +30,7 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [mainService],
+  providers: [appService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

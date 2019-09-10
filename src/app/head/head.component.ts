@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { mainService } from '../services/app.service';
-
 
 @Component({
   selector: 'app-head',
@@ -15,7 +13,7 @@ export class HeadComponent implements OnInit {
   displayHours = "0";
 
 
-  constructor(private mainService: mainService) {
+  constructor() {
 
     setInterval(
       () => {
