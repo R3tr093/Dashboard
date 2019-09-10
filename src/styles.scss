@@ -3632,3 +3632,31 @@ body
     overflow: hidden;
     
 }
+
+#animeElt
+{
+    position: absolute;
+    top: 200%;
+    left: 200%;
+    width: 100px;
+    height: auto;
+    opacity: 0;
+    z-index: 0;
+    animation-name: scaleEffect;
+    animation-duration: 23s;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+}
+
+@keyframes scaleEffect {
+    0%    {left:0%; top:110%; opacity: 1;}
+    
+    80%    {left:0%; top:0%; opacity: 1;}
+    90%    {left:0%; top:-10%; opacity: 0; scale: (0.5)}
+  
+    
+
+
+
+
+}
