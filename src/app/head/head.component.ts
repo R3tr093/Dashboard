@@ -27,6 +27,11 @@ export class HeadComponent implements OnInit {
         {
           this.displayHours = "0" + String(this.clockHour);
         }
+
+        else
+        {
+          this.displayHours = String(this.clockHour);
+        }
     
       }, 1000
     );
