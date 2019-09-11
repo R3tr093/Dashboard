@@ -27,16 +27,40 @@ export class BoxComponent implements OnInit {
   // Write the refresh function here
   refreshBox(){
     
+    let Allbox = document.getElementsByClassName('boxs');
+
+    let i = 0;
+
     let randInt = Math.floor(Math.random()* this.boxs.length)
 
-    document.getElementById(String(this.index)).classList.add("animated");
-    document.getElementById(String(this.index)).classList.add("shake");
+    while(i < Allbox.length - 3)
+    {
+      if(Allbox[i].getAttribute('id') === String(randInt))
+      {
+         this.refreshBox();
+      }
+      
+      
+      i++;
+    }  
+    let pureIndex = this.index;
+
+    document.getElementById(String(pureIndex)).classList.add("animated");
+    document.getElementById(String(pureIndex)).classList.add("shake");
 
     this.index = this.boxs[randInt].index;
 
     this.title = this.boxs[randInt].title;
 
     this.link = this.boxs[randInt].link;
+
+    setTimeout(function(){
+
+      document.getElementById(String(pureIndex)).classList.remove('shake');
+      document.getElementById(String(pureIndex)).setAttribute('id',String(randInt))
+
+
+    },2000)
   
   }
 
