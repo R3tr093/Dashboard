@@ -27,8 +27,16 @@ export class BoxComponent implements OnInit {
   // Write the refresh function here
   refreshBox(){
     
-    this.index = this.index + 1;
-    alert(this.boxs[0].link)
+    let randInt = Math.floor(Math.random()* this.boxs.length)
+
+    document.getElementById(String(this.index)).classList.add("animated");
+    document.getElementById(String(this.index)).classList.add("shake");
+
+    this.index = this.boxs[randInt].index;
+
+    this.title = this.boxs[randInt].title;
+
+    this.link = this.boxs[randInt].link;
   
   }
 
