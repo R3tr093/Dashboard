@@ -49,6 +49,25 @@ export class HomeComponent implements OnInit {
   constructor(private appService: appService) {
     this.Quotes = appService.Quotes;
     console.log(this.Quotes);
+
+    setInterval(
+      () => {
+        let randInt = Math.floor(Math.random()* this.Quotes.length)
+
+        let element = document.getElementById("quotesBox");
+        element.textContent = this.Quotes[randInt].quote;
+        element.classList.add("animated");
+        element.classList.add("slideInLeft");
+
+        setTimeout(function(){
+
+          element.classList.remove("slideInLeft");
+
+        },2000)
+    
+      }, 10000
+    );
+
   }
 
   ngOnInit() {
