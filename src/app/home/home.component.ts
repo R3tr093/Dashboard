@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { appService } from '../services/app.service';
 
 @Component({
   selector: 'app-home',
@@ -41,9 +42,14 @@ export class HomeComponent implements OnInit {
     
 
   ]
+
+  Quotes : any[];
  
  
-  constructor() { }
+  constructor(private appService: appService) {
+    this.Quotes = appService.Quotes;
+    console.log(this.Quotes);
+  }
 
   ngOnInit() {
   }
