@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { appService } from '../services/app.service';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-home',
@@ -44,11 +45,12 @@ export class HomeComponent implements OnInit {
   ]
 
   Quotes : any[];
+  Jokes : any[];
  
  
   constructor(private appService: appService) {
     this.Quotes = appService.Quotes;
-    console.log(this.Quotes);
+    this.Jokes = appService.Jokes;
 
     setInterval(
       () => {
@@ -73,6 +75,13 @@ export class HomeComponent implements OnInit {
         },11000)
     
       }, 14000);
+
+
+     setInterval(()=>{
+       
+      let randInt = Math.floor(Math.random()* this.Jokes.length)
+      document.getElementById("animeElt").setAttribute("title",this.Jokes[randInt].joke)
+     },10000) 
 
   }
 

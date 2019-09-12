@@ -17,6 +17,24 @@
 
 .boxImg
 {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    max-height: 20vh;
+}
+
+.badgesBoxs
+{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.badges
+{
+    height: 30px;
+    width: 20%;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 10px;
+    cursor: pointer;
 }

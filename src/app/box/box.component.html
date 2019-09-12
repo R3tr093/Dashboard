@@ -1,16 +1,20 @@
 <div class="boxs zoomInDown animated">
 
 <div class="imgBoxs">
-   <a [href]="link"><img class="x-fluid boxImg" src="../../assets/git.jpg"></a>
+   <a [href]="link" target="_blank"><img class="x-fluid boxImg" src="{{pic}}"></a>
 </div>
 
 <div class="badgesBoxs">
-        <h3>{{title}} </h3>
+
+<span class="badge badge-primary badges">Primary</span>
+<span class="badge badge-success badges">Success</span>
+<span class="badge badge-warning badges">Warning</span>
+
 </div>
 
 <div class="buttonsBoxs">
 
-        <button (click)="refreshBox()">Refresh</button>
+        <button id="refreshBtn" (click)="refreshBox()"></button>
 
 </div>
 

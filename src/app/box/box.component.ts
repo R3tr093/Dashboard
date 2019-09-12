@@ -11,7 +11,9 @@ export class BoxComponent implements OnInit {
   @Input() index: number;
   @Input() title: string;
   @Input() link:  string;
+  @Input() pic:  string;
   boxs : any[];
+  
   
 
 
@@ -22,6 +24,7 @@ export class BoxComponent implements OnInit {
 
   ngOnInit() {
     this.boxs = this.appService.Boxs;
+    this.pic = this.boxs[this.index].pic;
   }
 
   // Write the refresh function here
@@ -49,6 +52,8 @@ export class BoxComponent implements OnInit {
     this.title = this.boxs[randInt].title;
 
     this.link = this.boxs[randInt].link;
+
+    this.pic = this.boxs[randInt].pic;
 
     setTimeout(function(){
       element.classList.remove('flipInX');

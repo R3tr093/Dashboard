@@ -1,12 +1,84 @@
 @charset "UTF-8";
 
-/*!
- * animate.css -https://daneden.github.io/animate.css/
- * Version - 3.7.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2019 Daniel Eden
- */
+ #refreshBtn
+ {
+    background: url(assets/refresh.png) center no-repeat;
+    height: 25px;
+    width: 25px;
+    border : none;
+    position: relative;
+    left: 93%;
+    top: 7px;
+ }
+ 
+ body
+ {
+     background: url(assets/galaxy.png) center no-repeat;
+     background-size: cover;
+     height: 100vh;
+     overflow: hidden;
+     
+ }
+ 
+ #animeElt
+ {
+     position: absolute;
+     top: 200%;
+     left: 200%;
+     width: 100px;
+     height: auto;
+     opacity: 0;
+     z-index: 0;
+     animation-name: scaleEffect;
+     animation-duration: 40s;
+     animation-iteration-count: infinite;
+     border-radius: 50%;
+ }
+
+ #rocketEffect
+ {
+     position: absolute;
+     top: 200%;
+     left: 95%;
+     width: 130px;
+     height: auto;
+     opacity: 0;
+     z-index: 0;
+     animation-name: rocketEffect;
+     animation-duration: 80s;
+     animation-iteration-count: infinite;
+ }
+
+
+ @keyframes scaleEffect {
+  0%    {left:0%; top:110%; opacity: 1;}
+  
+  80%    {left:0%; top:0%; opacity: 1;}
+  90%    {left:0%; top:-10%; opacity: 0; scale: (0.5)}
+}
+
+@keyframes rocketEffect {
+  0%    {left:95%; top:110%; opacity: 1;}
+  10%    {left:95%; top:100%; opacity: 1;}
+  20%    {left:90%; top:90%; opacity: 1;}
+  30%    {left:95%; top:80%; opacity: 1;}
+  40%    {left:85%; top:70%; opacity: 1;}
+  40%    {left:5%; top:60%; opacity: 1;}
+  50%    {left:0%; top:80%; opacity: 1;}
+  60%    {left:48%; top:50%; opacity: 1;}
+  70%    {left:48%; top:10%; opacity: 1;}
+  80%    {left:48%; top:-100%; opacity: 0;}
+  90%    {left:0%; top:-10%; opacity: 0; scale: (0.5)}
+}
+
+
+
+
+
+
+
+
+
 
 @-webkit-keyframes bounce {
   from,
@@ -3624,42 +3696,6 @@
   }
 }
 
-body
-{
-    background: url(assets/galaxy.png) center no-repeat;
-    background-size: cover;
-    height: 100vh;
-    overflow: hidden;
-    
-}
-
-#animeElt
-{
-    position: absolute;
-    top: 200%;
-    left: 200%;
-    width: 100px;
-    height: auto;
-    opacity: 0;
-    z-index: 0;
-    animation-name: scaleEffect;
-    animation-duration: 23s;
-    animation-iteration-count: infinite;
-    border-radius: 50%;
-}
-
-@keyframes scaleEffect {
-    0%    {left:0%; top:110%; opacity: 1;}
-    
-    80%    {left:0%; top:0%; opacity: 1;}
-    90%    {left:0%; top:-10%; opacity: 0; scale: (0.5)}
-  
-    
-
-
-
-
-}
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -13698,3 +13734,4 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+

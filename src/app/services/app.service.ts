@@ -3,61 +3,93 @@ export class appService {
         {
           id : "1",
           title: "Un titre 1",
-          link: "Un lien 1"
+          link: "Un lien 1",
+          tags : ["el1","el2","el3"],
+          pic: "../../assets/git.jpg"
         },
         {
           id:  "2",
           title: "Un titre 2",
-          link: "Un lien 2"
+          link: "Un lien 2",
+          tags : ["el1","el2","el3"],
+          pic: "../../assets/google.png"
         },
         {
           id: "3",
           title: "Un titre 3",
-          link: " Un lien 3"
+          link: " Un lien 3",
+          tags : ["el1","el2","el3"],
+          pic: "../../assets/netlify.png"
         },
         {
           id: "4",
           title: "Un titre 4",
-          link: "Un lien 4"
+          link: "Un lien 4",
+          tags : ["el1","el2","el3"],
+          pic: "../../assets/youtube.png"
         },
         {
           id: "5",
           title: "Un titre 5",
-          link: "Un lien 5"
+          link: "Un lien 5",
+          tags : ["el1","el2","el3"],
+          pic: "../../assets/heroku.png"
         },
         {
           id: "6",
           title: "Un titre 6",
-          link: " Un lien 6"
+          link: " Un lien 6",
+          tags : ["el1","el2","el3"],
+          pic: "../../assets/facebook.png"
         }
         
     
       ]
+
       Quotes = [
         {
-          quote : "quote 1"
+          quote : "I have NOT lost my mind—I have it backed up on tape somewhere."
         },
         {
-          quote : "quote 2"
+          quote : "There is no place like 127.0.0.1"
         },
         {
-          quote : "quote 3"
+          quote : "On the Internet, nobody knows you’re a dog."
         },
         {
-          quote : "quote 4"
+          quote : "Software is like sex: It’s better when it’s free."
         },
         {
-          quote : "quote 5"
+          quote : "People don't care about what you say, they care about what you build."
         },
         {
-          quote : "quote 6"
+          quote : "Bad programmers worry about the code. Good programmers worry about data structures and their relationships"
         },
         {
-          quote : "quote 7"
+          quote : "First, solve the problem.Then write the code. "
         },
         {
-          quote : "quote 8"
+          quote : "Developer is an organism that turns coffee into code."
         },
+      ]
+
+
+      Jokes = [
+        {
+          joke: "Chuck Norris can take a screenshot of his blue screen."
+        },
+        {
+          joke: "Three Database SQL walked into a NoSQL bar. A little while later, they walked out because they couldn' find a table."
+        },
+        {
+          joke: "['Hip, Hip'] Array !"
+        },
+        {
+          joke: "There are three kinds of lies: Lies, damned lies, and benchmarks."
+        },
+        {
+          joke: "Have you heard about the new Cray super computer?  It’s so fast, it executes an infinite loop in 6 seconds."
+        }
       ]
   
 }
