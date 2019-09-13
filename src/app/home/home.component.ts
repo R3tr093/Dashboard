@@ -155,7 +155,7 @@ export class HomeComponent implements OnInit {
       setTimeout(function() {
        
         element.setAttribute('src','../../assets/cat.gif');
-      },1500)
+      },1550)
 
     },2000)
   }
