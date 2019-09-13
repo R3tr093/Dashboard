@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit {
         let element = document.getElementById("quotesBox");
 
         let animKeys = ["wooble","flip","rotateIn","zoomIn","rollIn"];
-        let colorKeys = ["#acd1f9","yellow","#e84a4c","white","cornsilk"];
+        let colorKeys = ["#acd1f9","yellow","white","cornsilk"];
         let randomKey = Math.floor(Math.random() * animKeys.length) 
         element.style.color = colorKeys[randomKey];
         console.log(colorKeys[randomKey])

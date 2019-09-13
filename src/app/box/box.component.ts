@@ -12,7 +12,9 @@ export class BoxComponent implements OnInit {
   @Input() title: string;
   @Input() link:  string;
   @Input() pic:  string;
+  @Input() tags:  any[];
   boxs : any[];
+  
   
   
 
@@ -25,6 +27,10 @@ export class BoxComponent implements OnInit {
   ngOnInit() {
     this.boxs = this.appService.Boxs;
     this.pic = this.boxs[this.index].pic;
+    this.title = this.boxs[this.index].title;
+    this.link = this.boxs[this.index].link;
+    this.tags = this.boxs[this.index].tags;
+
   }
 
   // Write the refresh function here
@@ -32,7 +38,7 @@ export class BoxComponent implements OnInit {
     
     let element = document.getElementById(String(this.index))
 
-    
+      
 
     let randInt = Math.floor(Math.random()* this.boxs.length)
 
@@ -54,6 +60,8 @@ export class BoxComponent implements OnInit {
     this.link = this.boxs[randInt].link;
 
     this.pic = this.boxs[randInt].pic;
+
+    this.tags = this.boxs[randInt].tags;
 
     setTimeout(function(){
       element.classList.remove('flipInX');

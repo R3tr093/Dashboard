@@ -2,44 +2,44 @@ export class appService {
     Boxs = [
         {
           id : "1",
-          title: "Un titre 1",
-          link: "Un lien 1",
-          tags : ["el1","el2","el3"],
+          title: "Explore Github",
+          link: "http://www.github.com",
+          tags : ["Free","DevTools","ShareCode"],
           pic: "../../assets/git.jpg"
         },
         {
           id:  "2",
-          title: "Un titre 2",
-          link: "Un lien 2",
-          tags : ["el1","el2","el3"],
+          title: "Google",
+          link: "http://www.google.com",
+          tags : ["BigBrother","Free","Search"],
           pic: "../../assets/google.png"
         },
         {
           id: "3",
-          title: "Un titre 3",
-          link: " Un lien 3",
-          tags : ["el1","el2","el3"],
+          title: "Netlify",
+          link: " http://www.netlify.com",
+          tags : ["Hosting","Free","BeCode"],
           pic: "../../assets/netlify.png"
         },
         {
           id: "4",
-          title: "Un titre 4",
-          link: "Un lien 4",
-          tags : ["el1","el2","el3"],
+          title: "YouTube",
+          link: "http://www.youtube.com",
+          tags : ["Free","Video","Music"],
           pic: "../../assets/youtube.png"
         },
         {
           id: "5",
-          title: "Un titre 5",
-          link: "Un lien 5",
-          tags : ["el1","el2","el3"],
+          title: "Heroku",
+          link: "http://www.heroku.com",
+          tags : ["Hosting","Free","BeCode"],
           pic: "../../assets/heroku.png"
         },
         {
           id: "6",
-          title: "Un titre 6",
-          link: " Un lien 6",
-          tags : ["el1","el2","el3"],
+          title: "Facebook",
+          link: " http://www.facebook.com",
+          tags : ["BigBrother","Social Network","Free"],
           pic: "../../assets/facebook.png"
         }
         
