@@ -150,12 +150,12 @@ export class HomeComponent implements OnInit {
 
     element.setAttribute('src','../../assets/boom.gif');
     setTimeout(function() {
-      element.style.display = "none";
+      
 
       setTimeout(function() {
-        element.style.display = "block";
+       
         element.setAttribute('src','../../assets/cat.gif');
-      },1000)
+      },1500)
 
     },2000)
   }
