@@ -37,6 +37,13 @@ export class BoxComponent implements OnInit {
   // Write the refresh function here
   refreshBox(){
     
+    let randAudio = Math.floor(Math.random()* 7) + 1;
+
+    let audioKey = String(randAudio);
+
+    let audio = new Audio('../assets/' + audioKey + '.wav');
+    audio.play();
+
     let element = document.getElementById(String(this.index));
 
     let randInt = Math.floor(Math.random()* this.boxs.length);

@@ -61,7 +61,7 @@
 
 
  @keyframes scaleEffect {
-  0%    {left:0%; top:110%; opacity: 1;}
+  0%    {left:0%; top:110%; opacity: 1; display: "block"}
   
   80%    {left:0%; top:0%; opacity: 1;}
   90%    {left:0%; top:-10%; opacity: 0; scale: (0.5)}

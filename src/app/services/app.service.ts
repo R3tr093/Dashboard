@@ -3,14 +3,14 @@ export class appService {
         {
           id : "1",
           title: "Explore Github",
-          link: "http://www.github.com",
+          link: "https://www.github.com",
           tags : ["Free","DevTools","ShareCode"],
           pic: "../../assets/git.jpg"
         },
         {
           id:  "2",
           title: "Google",
-          link: "http://www.google.com",
+          link: "https://www.google.com",
           tags : ["BigBrother","Free","Search"],
           pic: "../../assets/google.png"
         },
@@ -31,18 +31,24 @@ export class appService {
         {
           id: "5",
           title: "Heroku",
-          link: "http://www.heroku.com",
+          link: "https://www.heroku.com",
           tags : ["Hosting","Free","BeCode"],
           pic: "../../assets/heroku.png"
         },
         {
           id: "6",
           title: "Facebook",
-          link: " http://www.facebook.com",
+          link: " https://www.facebook.com",
           tags : ["BigBrother","Social Network","Free"],
           pic: "../../assets/facebook.png"
+        },
+        {
+          id: "7",
+          title: "Leaflet",
+          link: " https://www.leafletjs.com",
+          tags : ["Mapping","API","Free"],
+          pic: "../../assets/leaflet.png"
         }
-        
     
       ]
 

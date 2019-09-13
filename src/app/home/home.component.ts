@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit {
         let colorKeys = ["#acd1f9","yellow","white","cornsilk"];
         let randomKey = Math.floor(Math.random() * animKeys.length) 
         element.style.color = colorKeys[randomKey];
-        console.log(colorKeys[randomKey])
+
 
         element.textContent = this.Quotes[randInt].quote;
 
@@ -97,6 +97,25 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
   
+  Boom() {
+    let element = document.getElementById('rocketEffect');
+    
+
+    let audio = new Audio('../assets/boom.mp3');
+    audio.play();
+
+    element.setAttribute('src','../../assets/boom.gif');
+    setTimeout(function() {
+      element.style.display = "none";
+
+      setTimeout(function() {
+        element.style.display = "block";
+        element.setAttribute('src','../../assets/rocket.gif');
+      },7000)
+
+    },2000)
+
+  }
 
  
 
