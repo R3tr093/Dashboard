@@ -90,7 +90,28 @@ export class HomeComponent implements OnInit {
        
       let randInt = Math.floor(Math.random()* this.Jokes.length)
       document.getElementById("animeElt").setAttribute("title",this.Jokes[randInt].joke)
+      let element = document.getElementById('catEffect');
+      
+      
+        
+      
+      
+    
+     
      },10000) 
+
+     setInterval(function(){
+      let element = document.getElementById('catEffect');
+      if(element.style.display === "block")
+      {
+        element.style.display = "none";
+      }
+      else
+      {
+        element.style.display = "block";
+      }
+
+     },10000)
 
   }
 
@@ -99,6 +120,7 @@ export class HomeComponent implements OnInit {
   
   Boom() {
     let element = document.getElementById('rocketEffect');
+    
     
 
     let audio = new Audio('../assets/boom.mp3');
@@ -115,6 +137,27 @@ export class HomeComponent implements OnInit {
 
     },2000)
 
+  }
+
+  BoomCat()
+  {
+    let element = document.getElementById('catEffect');
+    
+    
+
+    let audio = new Audio('../assets/boom.mp3');
+    audio.play();
+
+    element.setAttribute('src','../../assets/boom.gif');
+    setTimeout(function() {
+      element.style.display = "none";
+
+      setTimeout(function() {
+        element.style.display = "block";
+        element.setAttribute('src','../../assets/cat.gif');
+      },1000)
+
+    },2000)
   }
 
  

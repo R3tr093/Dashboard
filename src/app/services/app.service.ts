@@ -38,7 +38,7 @@ export class appService {
         {
           id: "6",
           title: "Facebook",
-          link: " https://www.facebook.com",
+          link: "https://www.facebook.com/",
           tags : ["BigBrother","Social Network","Free"],
           pic: "../../assets/facebook.png"
         },

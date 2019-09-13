@@ -43,7 +43,12 @@ export class HeadComponent implements OnInit {
   clockColors(){
 
 
-   
+    let randAudio = Math.floor(Math.random()* 7) + 1;
+
+    let audioKey = String(randAudio);
+
+    let audio = new Audio('../assets/' + audioKey + '.wav');
+    audio.play();
    
     let colors = ["#e83a43","#4cc5ed","#f2e572","#4f4d4d","hotpink"]
 

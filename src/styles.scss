@@ -44,6 +44,21 @@
      border-radius: 50%;
  }
 
+
+ #catEffect
+ {
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  width: 130px;
+  height: auto;
+  opacity: 0;
+  z-index: 0;
+  animation-name: catEffect;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+ }
  #rocketEffect
  {
      position: absolute;
@@ -65,6 +80,11 @@
   
   80%    {left:0%; top:0%; opacity: 1;}
   90%    {left:0%; top:-10%; opacity: 0; scale: (0.5)}
+}
+
+@keyframes catEffect {
+  0%    {left:0%; top:0%; opacity: 1;}
+  90%    {left:150%; top:0%; opacity: 0; scale: (0.5);}
 }
 
 @keyframes rocketEffect {
