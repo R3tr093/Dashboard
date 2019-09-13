@@ -19,6 +19,15 @@
      overflow: hidden;
      
  }
+
+ .badgesBoxs
+ {
+    display: flex;
+    justify-content: space-around;
+    background: url(assets/code.jpg) center no-repeat;
+    background-size: cover;
+    height: 20%;
+ }
  
  #animeElt
  {
