@@ -14,6 +14,7 @@ export class BoxComponent implements OnInit {
   @Input() pic:  string;
   @Input() tags:  any[];
   boxs : any[];
+  lastEntrance : number;
   
   
   
@@ -36,11 +37,14 @@ export class BoxComponent implements OnInit {
   // Write the refresh function here
   refreshBox(){
     
-    let element = document.getElementById(String(this.index))
+    let element = document.getElementById(String(this.index));
 
-      
+    let randInt = Math.floor(Math.random()* this.boxs.length);
 
-    let randInt = Math.floor(Math.random()* this.boxs.length)
+    while(this.title === this.boxs[randInt].title)
+    {
+      randInt = Math.floor(Math.random()* this.boxs.length)
+    }
 
     element.classList.add("animated");
 
@@ -53,7 +57,6 @@ export class BoxComponent implements OnInit {
       element.classList.add("flipInY");
     }
     
-
 
     this.title = this.boxs[randInt].title;
 

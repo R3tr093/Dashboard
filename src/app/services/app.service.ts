@@ -17,14 +17,14 @@ export class appService {
         {
           id: "3",
           title: "Netlify",
-          link: " http://www.netlify.com",
+          link: " https://www.netlify.com",
           tags : ["Hosting","Free","BeCode"],
           pic: "../../assets/netlify.png"
         },
         {
           id: "4",
           title: "YouTube",
-          link: "http://www.youtube.com",
+          link: "https://www.youtube.com/watch?v=RJB74-q67Ho",
           tags : ["Free","Video","Music"],
           pic: "../../assets/youtube.png"
         },
