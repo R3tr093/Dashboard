@@ -55,7 +55,14 @@ export class HomeComponent implements OnInit {
     setInterval(
       () => {
         let randInt = Math.floor(Math.random()* this.Quotes.length)
+        
         let element = document.getElementById("quotesBox");
+
+        while(element.textContent === this.Quotes[randInt].quote)
+        {
+          randInt = Math.floor(Math.random()* this.Quotes.length)
+        }
+
 
         let animKeys = ["wooble","flip","rotateIn","zoomIn","rollIn"];
         let colorKeys = ["#acd1f9","yellow","white","cornsilk"];
@@ -64,6 +71,8 @@ export class HomeComponent implements OnInit {
         console.log(colorKeys[randomKey])
 
         element.textContent = this.Quotes[randInt].quote;
+
+        
         element.classList.add("animated");
         element.classList.add(animKeys[randomKey]);
 
