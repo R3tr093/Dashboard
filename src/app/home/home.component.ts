@@ -46,11 +46,13 @@ export class HomeComponent implements OnInit {
 
   Quotes : any[];
   Jokes : any[];
+  Score : any;
  
  
   constructor(private appService: appService) {
     this.Quotes = appService.Quotes;
     this.Jokes = appService.Jokes;
+    this.Score = 0;
 
     setInterval(
       () => {
@@ -121,7 +123,10 @@ export class HomeComponent implements OnInit {
   Boom() {
     let element = document.getElementById('rocketEffect');
     
-    
+    this.Score = this.Score + 10;
+    console.log("rocket destroyed ");
+
+    document.getElementById('appClock').textContent = String(this.Score)
 
     let audio = new Audio('../assets/boom.mp3');
     audio.play();
@@ -143,7 +148,10 @@ export class HomeComponent implements OnInit {
   {
     let element = document.getElementById('catEffect');
     
-    
+    this.Score = this.Score + 100;
+    console.log("cat destroyed ");
+
+    document.getElementById('appClock').textContent = String(this.Score)
 
     let audio = new Audio('../assets/boom.mp3');
     audio.play();

@@ -10,16 +10,17 @@ export class HeadComponent implements OnInit {
 
   Clock = new Date();
   clockHour = this.Clock.getHours();
+  clockMinute = this.Clock.getMinutes();
   displayHours = "0";
+  
 
 
   constructor() {
 
-    setInterval(
-      () => {
-        this.Clock = new Date();
+    this.Clock = new Date();
        
         this.clockHour = this.Clock.getUTCHours() + 2;
+        this.clockMinute = this.Clock.getMinutes();
         
         if(this.clockHour < 10)
         {
@@ -40,8 +41,38 @@ export class HeadComponent implements OnInit {
         {
           this.displayHours = String(this.clockHour);
         }
+
+
+    setInterval(
+      () => {
+        this.Clock = new Date();
+       
+        this.clockHour = this.Clock.getUTCHours() + 2;
+        this.clockMinute = this.Clock.getMinutes();
+        
+        if(this.clockHour < 10)
+        {
+          this.displayHours = "0" + String(this.clockHour);
+        }
+
+        if(this.clockHour === 24)
+        {
+          this.displayHours = "0" + String("0");
+        }
+
+        if(this.clockHour === 25)
+        {
+          this.displayHours = "0" + String("1");
+        }
+
+        else
+        {
+          this.displayHours = String(this.clockHour);
+        }
+
+        document.getElementById('appClock').textContent = String(this.clockHour) + " : " + String(this.clockMinute);
     
-      }, 1000
+      }, 10000
     );
     
 

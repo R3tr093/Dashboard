@@ -9,6 +9,9 @@ export class AppComponent {
   title = 'Dashboard';
 }
 
+
+
+
 document.body.onkeyup = function(e){
 
 
@@ -19,7 +22,6 @@ document.body.onkeyup = function(e){
     let element = document.getElementById('cmd');
     let val = element.style.display;
 
-    console.log(val)
 
     if(val === "" || val === "none")
     {
@@ -38,7 +40,7 @@ document.body.onkeyup = function(e){
     alert('nope')
   }
 
-  
+
 
    
 }
