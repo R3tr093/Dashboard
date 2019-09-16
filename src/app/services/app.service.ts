@@ -17,7 +17,7 @@ export class appService {
         {
           id: "3",
           title: "Netlify",
-          link: " https://www.netlify.com",
+          link: "https://www.netlify.com",
           tags : ["Hosting","Free","BeCode"],
           pic: "../../assets/netlify.png"
         },

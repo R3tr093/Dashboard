@@ -1,0 +1,36 @@
+#cmd
+{
+    min-height: 50vh;
+    display: none;
+    background: white;
+    width: 70%;
+    margin: auto;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 13px 7px yellow;
+    -moz-box-shadow: 0px 0px 13px 7px yellow;
+    box-shadow: 0px 0px 13px 7px yellow;
+    font-style: italic;
+
+}
+
+
+#dialogBox
+{
+    height: 40vh;
+    background: black;
+    color: yellow;
+    font-family: 'Press Start 2P', cursive;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    overflow-y: scroll;
+    border-bottom: 2px double yellow;
+}
+
+#userCmd
+{
+    min-height: 20%;
+}

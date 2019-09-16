@@ -15,6 +15,7 @@ import { BoxComponent } from './box/box.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import localeFrExtra from '@angular/common/locales/extra/fr';
+import { CmdComponent } from './cmd/cmd.component';
 
 registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
 
@@ -25,7 +26,8 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     HomeComponent,
     HeadComponent,
     FooterComponent,
-    BoxComponent
+    BoxComponent,
+    CmdComponent
   ],
   imports: [
     BrowserModule,
