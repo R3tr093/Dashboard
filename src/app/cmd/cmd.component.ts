@@ -33,11 +33,7 @@ export class CmdComponent implements OnInit {
        }
    
       }
-   
-      else
-     {
-       alert('nope')
-     }
+
       
    };
 
