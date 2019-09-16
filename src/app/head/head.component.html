@@ -9,7 +9,7 @@
         
         <h1 class="bounce animated" (click)="clockColors()" id="appClock"> {{displayHours}} : {{Clock | date: 'mm'}}
             
-                <img style="width: 40px;height:auto;position: absolute; top: 20px; left: 20px;" src="../../assets/sun.gif" *ngIf="clockHour <= 16">
+                
                 <img style="width:40px;height:auto;position: absolute; top: 23px; left: 20px;" src="../../assets/moon.gif" *ngIf="clockHour >= 17">
         
         </h1>
