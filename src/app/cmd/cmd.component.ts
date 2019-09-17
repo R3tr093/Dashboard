@@ -8,11 +8,25 @@ import { appService } from '../services/app.service';
 })
 export class CmdComponent implements OnInit {
 
+
+  userType : any;
+
   constructor() {
     
-    document.body.onkeyup = function(e){
 
+      // faire passez un booléen pour gérez le display quand on clique pour entrez une commande
+    this.userType = false;
 
+    document.body.addEventListener("keyup", function displayCmd(e){
+
+      document.getElementById('userInput').addEventListener('focus',function(){
+        document.body.removeEventListener("keyup", displayCmd);
+      });
+
+      document.getElementById('userInput').addEventListener('blur', (e) => {
+        document.body.addEventListener("keyup", displayCmd)   
+      });
+      
 
       if(e.keyCode === 32)
       {
@@ -35,7 +49,7 @@ export class CmdComponent implements OnInit {
       }
 
       
-   };
+   });
 
   }
 

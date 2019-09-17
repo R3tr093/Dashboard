@@ -19,12 +19,17 @@ export class HeadComponent implements OnInit {
 
     this.Clock = new Date();
        
-        this.clockHour = this.Clock.getUTCHours() + 2;
+        this.clockHour = this.Clock.getHours();
         this.clockMinute = this.Clock.getMinutes();
         
-        if(this.clockHour < 10)
+        if(Number(this.clockHour <= 9))
         {
           this.displayHours = "0" + String(this.clockHour);
+        }
+
+        if(Number(this.clockHour >= 10))
+        {
+          this.displayHours = String(this.clockHour);
         }
 
         if(this.clockHour === 24)
@@ -36,11 +41,22 @@ export class HeadComponent implements OnInit {
         {
           this.displayHours = "0" + String("1");
         }
-
         else
         {
           this.displayHours = String(this.clockHour);
         }
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+          if(this.clockHour <= 17)
+          {
+            document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/sun.gif'>";         
+          }
+  
+          if(this.clockHour >= 18)
+          {
+            document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/moon.gif'>";         
+          }
+       });
 
 
     setInterval(
@@ -50,10 +66,16 @@ export class HeadComponent implements OnInit {
         this.clockHour = this.Clock.getHours();
         this.clockMinute = this.Clock.getMinutes();
         
-        if(this.clockHour < 10)
+        if(Number(this.clockHour <= 9))
         {
           this.displayHours = "0" + String(this.clockHour);
         }
+
+        if(Number(this.clockHour >= 10))
+        {
+          this.displayHours = String(this.clockHour);
+        }
+
 
         if(this.clockHour === 24)
         {
@@ -62,12 +84,12 @@ export class HeadComponent implements OnInit {
 
         if(this.clockHour <= 17)
         {
-          document.getElementById('appClock').innerHTML = String(this.clockHour) + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/sun.gif'>";         
+          document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/sun.gif'>";         
         }
 
         if(this.clockHour >= 18)
         {
-          document.getElementById('appClock').innerHTML = String(this.clockHour) + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/moon.gif'>";         
+          document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/moon.gif'>";         
         }
 
         if(this.clockHour === 25)
@@ -75,14 +97,10 @@ export class HeadComponent implements OnInit {
           this.displayHours = "0" + String("1");
         }
 
-        else
-        {
-          this.displayHours = String(this.clockHour);
-        }
-
+        
        
     
-      }, 10000
+      }, 5000
     );
     
 
