@@ -46,14 +46,78 @@ export class CmdComponent implements OnInit {
        {
          element.style.display = "none";
        }
-   
-      }
 
+       // Type the command here
+       function getCommand(){
+          
+       let value = document.getElementById('userInput').value; 
+
+       value = value.toLowerCase();
+       
+       let render = document.getElementById('dialogBox');
+
+        
+        
       
-   });
 
-  }
+        function playMusic(src,element) {
+          element.src = src;
+          element.play();
+        }
+
+        function resumeMusic(element){
+          element.play();
+        }
+
+        function pauseMusic(element) {
+          element.pause();
+        }
+
+          if(value === "help")
+          {
+            render.innerHTML = "<p> Play --- this command resume a music </p> <p> stop --- this command pause the current music </p> <p> Play rock --- this command some rock playlist. </p>"
+          }
+
+          if(value === "play rock")
+          {
+            let audio = document.getElementById('audioElt');
+            let audioSrc =  '../assets/rock.mp3';
+            playMusic(audioSrc,audio);
+          
+
+            render.innerHTML = "<p> Music just started !  </p> <p> ♫♫♫ Find this playlist on :: https://www.youtube.com/watch?v=RJB74-q67Ho ♫♫♫</p>";
+          }
+
+          if(value === "play")
+          {
+            
+            let audio = document.getElementById('audioElt');
+            resumeMusic(audio)
+          
+
+            render.innerHTML = "<p> Music just started !  </p>"
+          }
 
 
+          if(value === "stop")
+          {            
+            let audio = document.getElementById('audioElt');
+            pauseMusic(audio);
+            render.innerHTML = "<p> Music just stopped !  </p>"
+          }
+       }
 
+       element.addEventListener("keyup",function (e) {
+        
+        if(e.keyCode === 13)
+        {
+          getCommand();
+        }
+       
+      })
+    }
+
+  });
+
+ }
 }
