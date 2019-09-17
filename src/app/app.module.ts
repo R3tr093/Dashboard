@@ -15,13 +15,7 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import localeFrExtra from '@angular/common/locales/extra/fr';
 import { CmdComponent } from './cmd/cmd.component';
-import { PostComponent } from './post/post.component';
-import { RouterModule, Routes } from '@angular/router';
 
-const appRoutes: Routes = [
-  { path: '', component: AppComponent },
-  { path: 'posts', component: PostComponent }
-];
 
 registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
 
@@ -32,14 +26,12 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     HomeComponent,
     HeadComponent,
     BoxComponent,
-    CmdComponent,
-    PostComponent
+    CmdComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DragDropModule,
-    RouterModule.forRoot(appRoutes)
   ],
   providers: [appService],
   bootstrap: [AppComponent]
