@@ -50,7 +50,7 @@ export class CmdComponent implements OnInit {
        // Type the command here
        function getCommand(){
           
-       let command = document.getElementById('userInput').value; 
+       let command  = (<HTMLInputElement>document.getElementById('userInput')).value;
         
        command = command.toLowerCase();
        
