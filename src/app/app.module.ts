@@ -8,13 +8,19 @@ import { HomeComponent } from './home/home.component';
 import { HeadComponent } from './head/head.component';
 import { appService } from './services/app.service';
 import { BoxComponent } from './box/box.component';
-
+import { RouterModule, Routes } from '@angular/router';
       
 
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import localeFrExtra from '@angular/common/locales/extra/fr';
 import { CmdComponent } from './cmd/cmd.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
+const appRoutes: Routes = [
+  { path: '',component: HomeComponent },
+  { path: '**', component: NotFoundComponent }
+];
 
 
 registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
@@ -26,12 +32,18 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     HomeComponent,
     HeadComponent,
     BoxComponent,
-    CmdComponent
+    CmdComponent,
+    NotFoundComponent
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DragDropModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [appService],
   bootstrap: [AppComponent]
