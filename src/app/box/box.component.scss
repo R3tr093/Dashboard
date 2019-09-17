@@ -54,3 +54,9 @@
     top: -34vh;
     left: 94%;
 }
+
+.cross:hover
+{
+    transform: scale(1.5);
+    cursor: pointer;
+}
