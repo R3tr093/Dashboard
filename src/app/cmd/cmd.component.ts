@@ -50,9 +50,9 @@ export class CmdComponent implements OnInit {
        // Type the command here
        function getCommand(){
           
-       let value = document.getElementById('userInput').value; 
-
-       value = value.toLowerCase();
+       let command = document.getElementById('userInput').value; 
+        
+       command = command.toLowerCase();
        
        let render = document.getElementById('dialogBox');
 
@@ -73,12 +73,12 @@ export class CmdComponent implements OnInit {
           element.pause();
         }
 
-          if(value === "help")
+          if(command === "help")
           {
             render.innerHTML = "<p> Play --- this command resume a music </p> <p> stop --- this command pause the current music </p> <p> Play rock --- this command some rock playlist. </p>"
           }
 
-          if(value === "play rock")
+          if(command === "play rock")
           {
             let audio = document.getElementById('audioElt');
             let audioSrc =  '../assets/rock.mp3';
@@ -88,7 +88,7 @@ export class CmdComponent implements OnInit {
             render.innerHTML = "<p> Music just started !  </p> <p> ♫♫♫ Find this playlist on :: https://www.youtube.com/watch?v=RJB74-q67Ho ♫♫♫</p>";
           }
 
-          if(value === "play")
+          if(command === "play")
           {
             
             let audio = document.getElementById('audioElt');
@@ -99,7 +99,7 @@ export class CmdComponent implements OnInit {
           }
 
 
-          if(value === "stop")
+          if(command === "stop")
           {            
             let audio = document.getElementById('audioElt');
             pauseMusic(audio);
