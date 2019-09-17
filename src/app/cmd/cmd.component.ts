@@ -9,13 +9,14 @@ import { appService } from '../services/app.service';
 export class CmdComponent implements OnInit {
 
 
-  userType : any;
 
   constructor() {
     
 
-      // faire passez un booléen pour gérez le display quand on clique pour entrez une commande
-    this.userType = false;
+  }
+
+  ngOnInit() {
+
 
     document.body.addEventListener("keyup", function displayCmd(e){
 
@@ -51,9 +52,6 @@ export class CmdComponent implements OnInit {
       
    });
 
-  }
-
-  ngOnInit() {
   }
 
 

@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeadComponent } from './head/head.component';
-import { FooterComponent } from './footer/footer.component';
 import { appService } from './services/app.service';
 import { BoxComponent } from './box/box.component';
 
@@ -25,7 +24,6 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     AppComponent,
     HomeComponent,
     HeadComponent,
-    FooterComponent,
     BoxComponent,
     CmdComponent
   ],

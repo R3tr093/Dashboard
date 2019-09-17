@@ -16,98 +16,89 @@ export class HeadComponent implements OnInit {
 
 
   constructor() {
-
-    this.Clock = new Date();
-       
-        this.clockHour = this.Clock.getHours();
-        this.clockMinute = this.Clock.getMinutes();
-        
-        if(Number(this.clockHour <= 9))
-        {
-          this.displayHours = "0" + String(this.clockHour);
-        }
-
-        if(Number(this.clockHour >= 10))
-        {
-          this.displayHours = String(this.clockHour);
-        }
-
-        if(this.clockHour === 24)
-        {
-          this.displayHours = "0" + String("0");
-        }
-
-        if(this.clockHour === 25)
-        {
-          this.displayHours = "0" + String("1");
-        }
-        else
-        {
-          this.displayHours = String(this.clockHour);
-        }
-
-        window.addEventListener('DOMContentLoaded', (event) => {
-          if(this.clockHour <= 17)
-          {
-            document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/sun.gif'>";         
-          }
-  
-          if(this.clockHour >= 18)
-          {
-            document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/moon.gif'>";         
-          }
-       });
-
-
-    setInterval(
-      () => {
-        this.Clock = new Date();
-       
-        this.clockHour = this.Clock.getHours();
-        this.clockMinute = this.Clock.getMinutes();
-        
-        if(Number(this.clockHour <= 9))
-        {
-          this.displayHours = "0" + String(this.clockHour);
-        }
-
-        if(Number(this.clockHour >= 10))
-        {
-          this.displayHours = String(this.clockHour);
-        }
-
-
-        if(this.clockHour === 24)
-        {
-          this.displayHours = "0" + String("0");
-        }
-
-        if(this.clockHour <= 17)
-        {
-          document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/sun.gif'>";         
-        }
-
-        if(this.clockHour >= 18)
-        {
-          document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/moon.gif'>";         
-        }
-
-        if(this.clockHour === 25)
-        {
-          this.displayHours = "0" + String("1");
-        }
-
-        
-       
-    
-      }, 5000
-    );
-    
-
    }
 
   ngOnInit() {
-  }
+    this.Clock = new Date();
+       
+    this.clockHour = this.Clock.getHours();
+    this.clockMinute = this.Clock.getMinutes();
+    
+    if(Number(this.clockHour <= 9))
+    {
+      this.displayHours = "0" + String(this.clockHour);
+    }
+
+    if(Number(this.clockHour >= 10))
+    {
+      this.displayHours = String(this.clockHour);
+    }
+
+    if(this.clockHour === 24)
+    {
+      this.displayHours = "0" + String("0");
+    }
+
+    if(this.clockHour === 25)
+    {
+      this.displayHours = "0" + String("1");
+    }
+    else
+    {
+      this.displayHours = String(this.clockHour);
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      if(this.clockHour <= 17)
+      {
+        document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/sun.gif'>";         
+      }
+
+      if(this.clockHour >= 18)
+      {
+        document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/moon.gif'>";         
+      }
+   });
+
+
+  setInterval(() => {
+    this.Clock = new Date();
+   
+    this.clockHour = this.Clock.getHours();
+    this.clockMinute = this.Clock.getMinutes();
+    
+    if(Number(this.clockHour <= 9))
+    {
+      this.displayHours = "0" + String(this.clockHour);
+    }
+
+    if(Number(this.clockHour >= 10))
+    {
+      this.displayHours = String(this.clockHour);
+    }
+
+
+    if(this.clockHour === 24)
+    {
+      this.displayHours = "0" + String("0");
+    }
+
+    if(this.clockHour <= 17)
+    {
+      document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/sun.gif'>";         
+    }
+
+    if(this.clockHour >= 18)
+    {
+      document.getElementById('appClock').innerHTML = this.displayHours + " : " + String(this.clockMinute) + " <img style='width: 40px;height:auto;position: absolute; top: 20px; left: 20px;' src='../../assets/moon.gif'>";         
+    }
+
+    if(this.clockHour === 25)
+    {
+      this.displayHours = "0" + String("1");
+    }
+  }, 5000);
+}
 
   clockColors(){
 

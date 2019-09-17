@@ -52,8 +52,13 @@ export class HomeComponent implements OnInit {
   constructor(private appService: appService) {
     this.Quotes = appService.Quotes;
     this.Jokes = appService.Jokes;
-    this.Score = 0;
+    this.Score = appService.Score;
 
+    
+
+  }
+
+  ngOnInit() {
     setInterval(
       () => {
         let randInt = Math.floor(Math.random()* this.Quotes.length)
@@ -114,10 +119,6 @@ export class HomeComponent implements OnInit {
       }
 
      },10000)
-
-  }
-
-  ngOnInit() {
   }
   
   Boom() {
