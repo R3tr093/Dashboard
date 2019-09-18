@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KawaiComponent implements OnInit {
 
+  
+  Score : any;
+  
   constructor() {}
 
   ngOnInit() {
@@ -15,6 +18,8 @@ export class KawaiComponent implements OnInit {
       document.body.style.backgroundRepeat = "no-repeat";
       document.body.style.backgroundSize =  "cover";
 
+      this.Score = document.getElementById('appClock').getAttribute('data');
+
       let animeElt  = (<HTMLInputElement>document.getElementById('animeElt'));
         
       animeElt.src = "assets/kawaiOctopus.gif";
@@ -22,12 +27,14 @@ export class KawaiComponent implements OnInit {
       let appClock = (<HTMLInputElement>document.getElementById('appClock'));
       appClock.style.background = "hotpink";
       appClock.style.backgroundImage = "url(../../assets/kawaiClock.gif)";
-      
       let catEffect = (<HTMLInputElement>document.getElementById('catEffect'));
       catEffect.src = "assets/unicorn.gif";
 
+
       let rocketEffect = (<HTMLInputElement>document.getElementById('rocketEffect'));
-      rocketEffect.src = "assets/rocketKawai.gif"
+      rocketEffect.src = "assets/rocketKawai.gif";
+
+      
       
 
     
