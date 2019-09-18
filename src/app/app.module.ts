@@ -16,9 +16,11 @@ import localeFr from '@angular/common/locales/fr';
 import localeFrExtra from '@angular/common/locales/extra/fr';
 import { CmdComponent } from './cmd/cmd.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { KawaiComponent } from './kawai/kawai.component';
 
 const appRoutes: Routes = [
   { path: '',component: AppComponent },
+  { path: 'kawai', component: KawaiComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -33,7 +35,8 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     HeadComponent,
     BoxComponent,
     CmdComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    KawaiComponent
   
   ],
   imports: [
