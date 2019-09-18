@@ -101,18 +101,7 @@ export class HomeComponent implements OnInit {
       
      },10000) 
 
-     setInterval(function(){
-      let element = document.getElementById('catEffect');
-      if(element.style.display === "block")
-      {
-        element.style.display = "none";
-      }
-      else
-      {
-        element.style.display = "block";
-      }
-
-     },10000)
+     
   }
   
   Boom() {

@@ -7,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KawaiComponent implements OnInit {
 
-  constructor() {
-
-   }
+  constructor() {}
 
   ngOnInit() {
-    window.addEventListener('DOMContentLoaded', (event) => {
       document.body.style.background = " url(assets/kawaiBck.jpg)";
       document.body.style.backgroundPosition = "center";
       document.body.style.backgroundRepeat = "no-repeat";
@@ -25,6 +22,7 @@ export class KawaiComponent implements OnInit {
       let appClock = (<HTMLInputElement>document.getElementById('appClock'));
       appClock.style.background = "hotpink";
       appClock.style.backgroundImage = "url(../../assets/kawaiClock.gif)";
+      
       let catEffect = (<HTMLInputElement>document.getElementById('catEffect'));
       catEffect.src = "assets/unicorn.gif";
 
@@ -32,7 +30,7 @@ export class KawaiComponent implements OnInit {
       rocketEffect.src = "assets/rocketKawai.gif"
       
 
-    });
+    
   }
 
   

@@ -19,7 +19,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { KawaiComponent } from './kawai/kawai.component';
 
 const appRoutes: Routes = [
-  { path: '',component: AppComponent },
+  { path: '',component: HomeComponent },
   { path: 'kawai', component: KawaiComponent },
   { path: '**', component: NotFoundComponent }
 ];
