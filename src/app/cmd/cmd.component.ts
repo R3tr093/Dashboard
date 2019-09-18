@@ -75,7 +75,7 @@ export class CmdComponent implements OnInit {
 
           if(command === "help")
           {
-            render.innerHTML = "<p> Play --- this command resume a music </p> <p> stop --- this command pause the current music </p> <p> Play rock --- this command some rock playlist. </p>"
+            render.innerHTML = "<p> Play --- this command resume a music </p> <p> stop --- this command pause the current music </p><p> Play rock --- this command play some rock playlist. </p><p> Play creepy --- this command play some creepy playlist  🎃  . </p><p> Play kawai --- this command play some kawai playlist 🏯 </p><p> Play rap --- this command play some rap playlist </p><p> Play christmas --- This command play some christmas songs 🎄🎅🎆</p> <p> Score --- Return you current score  </p>"
           }
 
           if(command === "play rock")
@@ -86,6 +86,46 @@ export class CmdComponent implements OnInit {
           
 
             render.innerHTML = "<p> Music just started !  </p> <p> ♫♫♫ Find this playlist on :: https://www.youtube.com/watch?v=RJB74-q67Ho ♫♫♫</p>";
+          }
+
+          if(command === "play rap")
+          {
+            let audio = document.getElementById('audioElt');
+            let audioSrc =  '../assets/rap.mp3';
+            playMusic(audioSrc,audio);
+          
+
+            render.innerHTML = "<p> ♫♫♫ Music just started !  ♫♫♫</p>";
+          }
+          
+          if(command === "play christmas")
+          {
+            let audio = document.getElementById('audioElt');
+            let audioSrc =  '../assets/christmas.mp3';
+            playMusic(audioSrc,audio);
+          
+
+            render.innerHTML = "<p> ♫♫♫ 🎄🎅🎆 Music just started, Merry christmas ! 🎄🎅🎆 ♫♫♫</p>";
+          }
+
+          if(command === "play creepy")
+          {
+            let audio = document.getElementById('audioElt');
+            let audioSrc =  '../assets/creepy.mp3';
+            playMusic(audioSrc,audio);
+          
+
+            render.innerHTML = "<p> ♫♫♫ 🎃 Music just started ! 🎃 ♫♫♫</p>";
+          }
+
+          if(command === "play kawai")
+          {
+            let audio = document.getElementById('audioElt');
+            let audioSrc =  '../assets/kawai.mp3';
+            playMusic(audioSrc,audio);
+          
+
+            render.innerHTML = "<p> ♫♫♫ 🏯🈳 Music just started ! 🈳🏯 ♫♫♫</p>";
           }
 
           if(command === "play")
@@ -104,6 +144,17 @@ export class CmdComponent implements OnInit {
             let audio = document.getElementById('audioElt');
             pauseMusic(audio);
             render.innerHTML = "<p> Music just stopped !  </p>"
+          }
+
+          if(command === "score")
+          {            
+            let Score = document.getElementById('appClock').getAttribute('data');
+
+            if (Score == null){
+              Score = "0";
+            }
+
+            render.innerHTML = "<p> You scored   " + String(Score) + "  points 🌟🌟🌟 .</p>"
           }
        }
 

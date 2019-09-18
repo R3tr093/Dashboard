@@ -119,6 +119,9 @@ export class HomeComponent implements OnInit {
     let element = document.getElementById('rocketEffect');
     
     this.Score = this.Score + 10;
+
+    document.getElementById('appClock').setAttribute('data',String(this.Score));
+
     console.log("rocket destroyed ");
 
     document.getElementById('appClock').textContent = String(this.Score)
@@ -144,6 +147,9 @@ export class HomeComponent implements OnInit {
     let element = document.getElementById('catEffect');
     
     this.Score = this.Score + 100;
+
+    document.getElementById('appClock').setAttribute('data',String(this.Score));
+    
     console.log("cat destroyed ");
 
     document.getElementById('appClock').textContent = String(this.Score)

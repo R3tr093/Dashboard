@@ -45,7 +45,7 @@ export class appService {
         {
           id: "7",
           title: "Leaflet",
-          link: " https://www.leafletjs.com",
+          link: "https://www.leafletjs.com",
           tags : ["Mapping","API","Free"],
           pic: "../../assets/leaflet.png"
         }
@@ -76,6 +76,9 @@ export class appService {
         },
         {
           quote : "Developer is an organism that turns coffee into code."
+        },
+        {
+          quote : "space bar will give you super power !"
         },
       ]
 
