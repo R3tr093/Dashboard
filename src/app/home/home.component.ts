@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  ngOnInit() {    
     setInterval(
       () => {
         let randInt = Math.floor(Math.random()* this.Quotes.length)
@@ -149,8 +149,7 @@ export class HomeComponent implements OnInit {
     this.Score = this.Score + 100;
 
     document.getElementById('appClock').setAttribute('data',String(this.Score));
-    
-    console.log("cat destroyed ");
+  
 
     document.getElementById('appClock').textContent = String(this.Score)
 
