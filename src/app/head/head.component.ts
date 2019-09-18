@@ -119,7 +119,7 @@ export class HeadComponent implements OnInit {
     {
       this.displayHours = "0" + String("1");
     }
-  }, 5000);
+  }, 10000);
 }
 
   clockColors(){

@@ -53,6 +53,7 @@ export class HomeComponent implements OnInit {
     this.Quotes = appService.Quotes;
     this.Jokes = appService.Jokes;
     this.Score = appService.Score;
+    
 
     
 
@@ -72,7 +73,7 @@ export class HomeComponent implements OnInit {
 
 
         let animKeys = ["wooble","flip","rotateIn","zoomIn","rollIn"];
-        let colorKeys = ["#acd1f9","yellow","white","cornsilk"];
+        let colorKeys = ["yellow","white","cornsilk"];
         let randomKey = Math.floor(Math.random() * animKeys.length) 
         element.style.color = colorKeys[randomKey];
 
@@ -90,21 +91,14 @@ export class HomeComponent implements OnInit {
 
         },11000)
     
-      }, 14000);
+      }, 20000);
 
 
      setInterval(()=>{
        
       let randInt = Math.floor(Math.random()* this.Jokes.length)
       document.getElementById("animeElt").setAttribute("title",this.Jokes[randInt].joke)
-      let element = document.getElementById('catEffect');
       
-      
-        
-      
-      
-    
-     
      },10000) 
 
      setInterval(function(){
