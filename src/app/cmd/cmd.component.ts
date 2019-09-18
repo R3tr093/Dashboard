@@ -75,7 +75,7 @@ export class CmdComponent implements OnInit {
 
           if(command === "help")
           {
-            render.innerHTML = "<p> Play --- this command resume a music </p> <p> stop --- this command pause the current music </p><p> Play rock --- this command play some rock playlist. </p><p> Play creepy --- this command play some creepy playlist  🎃  . </p><p> Play kawai --- this command play some kawai playlist 🏯 </p><p> Play rap --- this command play some rap playlist </p><p> Play christmas --- This command play some christmas songs 🎄🎅🎆</p> <p> Score --- Return you current score  </p>"
+            render.innerHTML = "<p> Play --- this command resume a music </p> <p> stop --- this command pause the current music </p><p> Play rock --- this command play some rock playlist. </p><p> Play creepy --- this command play some creepy playlist  🎃  . </p><p> Play kawai --- this command play some kawai playlist 🏯 </p><p> Play rap --- this command play some rap playlist </p><p> Play christmas --- This command play some christmas songs 🎄🎅🎆</p> <p> Score --- Return you current score  </p><p> Portal kawai --- open a portal to kawai world  </p><p> Portail delete --- Close all portals on the screen.  </p>"
           }
 
           if(command === "play rock")
