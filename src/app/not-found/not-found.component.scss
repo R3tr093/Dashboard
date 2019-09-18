@@ -8,11 +8,6 @@ body {
   backface-visibility: hidden;
 }
 
-#appClock
-{
-  display: none;
-}
-
 #wrapperTxt
 {
     position: relative;
@@ -68,6 +63,11 @@ span:nth-child(even){
     animation-delay: #{(3 + ($item/10))}s; 
   }
 } 
+
+#wrapPortal
+{
+  display: none;
+}
 
 #portal
 {

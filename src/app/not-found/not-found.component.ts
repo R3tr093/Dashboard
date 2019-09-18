@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    setTimeout(()=>{
+
+      document.getElementById('wrapPortal').style.display = "block";
+
+    },7500)
+  }
 
   ngOnInit() {
     

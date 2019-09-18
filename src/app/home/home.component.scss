@@ -19,3 +19,116 @@
     font-size: 26px;
 
 }
+
+#appClock
+{
+  display: none;
+}
+
+#wrapperTxt
+{
+    position: relative;
+    left: 10%;
+    top: 20%;
+    
+}
+
+span {
+  display: inline-block;
+  text-shadow: 0 0 0 whitesmoke;
+  animation: smoky 5s 3s both;
+  font-size: 15vh;
+  font-family: "Permanent Marker", cursive;
+  color: aliceblue;
+}
+
+span:nth-child(even){
+  animation-name: smoky-mirror;
+}
+
+@keyframes smoky {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform:
+      translate3d(15rem,-8rem,0)
+      rotate(-40deg)
+      skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px whitesmoke; }
+  to {
+    transform:
+      translate3d(18rem,-8rem,0)
+      rotate(-40deg) 
+      skewX(-70deg)
+      scale(2);
+     text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@for $item from 1 through 21 {
+  span:nth-of-type(#{$item}){ 
+    animation-delay: #{(3 + ($item/10))}s; 
+  }
+} 
+
+#wrapPortal
+{
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    display: none;
+}
+
+.portal
+{
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.portalLink
+{
+    
+    opacity: 0;
+    animation-name: opacityEffect;
+    animation-delay: 5s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#tips
+{
+    font-size: 2vh;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: yellow;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+    opacity: 0;
+    animation-name: opacityEffect;
+    animation-delay: 5s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes opacityEffect {
+ 0%    {opacity: 0; scale: 0.5}
+
+ 100%    {opacity: 1; scale: (1.2)}
+}

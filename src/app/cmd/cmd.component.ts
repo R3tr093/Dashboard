@@ -156,6 +156,31 @@ export class CmdComponent implements OnInit {
 
             render.innerHTML = "<p> You scored   " + String(Score) + "  points 🌟🌟🌟 .</p>"
           }
+
+          function hidePortal() {
+           
+            document.getElementById("kawaiPortal").style.display = "none";
+            
+          }
+          if(command === "portal kawai")
+          
+          {
+            hidePortal();
+            document.getElementById('main').style.display = "none";
+            document.getElementById('wrapPortal').style.display = "block";
+            document.getElementById('tips').textContent = " Portal for kawai world is ready ! ";
+            document.getElementById('kawaiPortal').style.display = "block";
+          }
+
+          if(command === "portal delete")
+          {
+            document.getElementById('main').style.display = "flex";
+            document.getElementById('wrapPortal').style.display = "none";
+            hidePortal();
+
+          }
+
+         
        }
 
        element.addEventListener("keyup",function (e) {
