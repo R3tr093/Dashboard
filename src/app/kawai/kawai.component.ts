@@ -12,6 +12,16 @@ export class KawaiComponent implements OnInit {
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize =  "cover";
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+      document.body.style.background = " url(assets/kawaiBck.jpg)";
+      document.body.style.backgroundPosition = "center";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundSize =  "cover";
+
+      document.getElementById('animeElt').src = "assets/kawaiOctopus.gif";
+
+  });
   }
 
   ngOnInit() {
