@@ -56,6 +56,7 @@ export class KawaiComponent implements OnInit {
   }
 
 
+
   ngOnInit() {
 
     document.body.style.background = " url(../../assets/kawaiBck.jpg)";
@@ -100,15 +101,100 @@ export class KawaiComponent implements OnInit {
   
           },10000)
       
-        }, 20000);
- 
+        }, 20000);  
 
- 
 
-     
-       
+        function octoKawai() {
+          let elem = document.getElementById("octoKawai");   
+          
+          let posTop = -20;
+
+          let posLeft = -20;
+          
+          let animeID = setInterval(frame, 150);
+          
+          function frame() {
+            if (posTop == 95 && posLeft == 95)
+            {
+              clearInterval(animeID);
+              
+              let animeID2 = setInterval(frame2,110)
+
+              let posTop = 95;
+
+              function frame2(){
+
+                if(posTop === -20)
+                {
+                  clearInterval(animeID2);
+                  
+                  let animeID3 = setInterval(frame3,120)
+
+                  let posLeft = 95;
+
+                  function frame3(){
+
+                    if(posLeft === 50)
+                    {
+                      clearInterval(animeID3)
+
+                      setTimeout(function(){
+
+                        octoKawai();
+
+                      },20000)
+
+                    }
+
+                    else
+                    {
+                      posLeft--;
+
+                      if(posLeft % 3 === 0)
+                      {
+                        elem.style.top = -18 + "%";
+                      }
+
+                      else
+                      {
+                        elem.style.top = -22 + "%";
+                      }
+
+                      elem.style.left = posLeft + '%'; 
+
+                    }
+
+                  }
+
+                }
+
+                else
+                {
+                  posTop--;
+                  elem.style.top = posTop + '%'; 
+                }
+
+              }
+            } 
+
+            else 
+            {
+              posTop++;
+              posLeft++; 
+              elem.style.top = posTop + '%'; 
+              elem.style.left = posLeft + '%'; 
+            }
+          }
+        }
+        
+        octoKawai();
   }
 
-  
+
+
+
+ 
 
 }
+
+
