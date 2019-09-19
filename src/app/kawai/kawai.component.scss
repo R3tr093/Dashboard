@@ -1,0 +1,22 @@
+#kawai
+{
+    height: 77vh;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 0;
+    position: relative;
+    top: -3vh;
+}
+#quotesBox
+{
+    position: absolute;
+    top: 73.5vh;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 26px;
+
+}

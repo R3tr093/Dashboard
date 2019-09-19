@@ -4,7 +4,7 @@ import { appService } from '../services/app.service';
 @Component({
   selector: 'app-box',
   templateUrl: './box.component.html',
-  styleUrls: ['./box.component.scss']
+  styleUrls: ['./box.component.scss','../kawai/kawai.component.scss','../home/home.component.scss']
 })
 export class BoxComponent implements OnInit {
 

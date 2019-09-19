@@ -60,6 +60,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {    
+    
     setInterval(
       () => {
         let randInt = Math.floor(Math.random()* this.Quotes.length)

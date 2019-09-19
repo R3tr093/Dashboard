@@ -6,16 +6,7 @@ audio
 }
 
 
- #refreshBtn
- {
-    background: url(assets/refresh.png) center no-repeat;
-    height: 25px;
-    width: 25px;
-    border : none;
-    position: relative;
-    left: 93%;
-    top: 7px;
- }
+
  
  body
  {
@@ -30,8 +21,6 @@ audio
  {
     display: flex;
     justify-content: space-around;
-    background: url(assets/code.jpg) center no-repeat;
-    background-size: cover;
     height: 20%;
  }
  
@@ -40,7 +29,7 @@ audio
      position: absolute;
      top: 200%;
      left: 200%;
-     width: 100px;
+     width: 10vh;
      height: auto;
      opacity: 0;
      z-index: 0;
