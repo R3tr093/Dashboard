@@ -265,12 +265,6 @@ export class KawaiComponent implements OnInit {
 
         rocketKawai();
   }
-
-
-
-
- 
-
 }
 
 

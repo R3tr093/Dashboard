@@ -220,7 +220,7 @@ export class CmdComponent implements OnInit {
              for(let i = 0; i < badges.length; i++)
              {
               let target = (<HTMLInputElement>document.getElementsByClassName('badgesBoxs')[i]);
-              target.style.backgroundImage = "url('../assets/code.png')";
+              target.style.backgroundImage = "url('../assets/code.jpg')";
               target.style.backgroundColor = "none";
               target.style.borderTop = "cornflowerblue 2px solid";
               target.style.boxShadow = "none";
