@@ -1,3 +1,5 @@
+//font-family: 'Courgette', cursive;
+
 #kawai
 {
     height: 77vh;
@@ -35,4 +37,23 @@
     top: 0px;
     left: 0px;
     z-index: 0;
+}
+
+#rocketKawai
+{
+    width: 10vh;
+    height: auto;
+    position: absolute;
+    top: -21vh;
+    left: -21vh;
+    z-index: 0;
+}
+
+#miku
+{
+    position : absolute;
+    left: 17vh;
+    top: -19.5vh;
+    width: 20vh;
+    height: auto;
 }

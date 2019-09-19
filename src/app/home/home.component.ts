@@ -53,6 +53,8 @@ export class HomeComponent implements OnInit {
     this.Quotes = appService.Quotes;
     this.Jokes = appService.Jokes;
     this.Score = appService.Score;
+
+
     
 
     
@@ -61,6 +63,20 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {    
     
+      document.body.style.background = " url(../../assets/galaxy.png)";
+     document.body.style.backgroundPosition = "center";
+     document.body.style.backgroundRepeat = "no-repeat";
+     document.body.style.backgroundSize =  "cover";
+    
+      this.Score = document.getElementById('appClock').getAttribute('data');
+      let appClock = (<HTMLInputElement>document.getElementById('appClock'));
+      let wrapPortal = (<HTMLInputElement>document.getElementById('wrapPortal'));
+      wrapPortal.style.display = "none";
+      appClock.style.backgroundImage = "url(../../assets/clock.gif)";
+      appClock.style.backgroundRepeat = "no-repeat";
+      appClock.style.backgroundPosition = "center";
+      appClock.style.backgroundSize = "cover";
+
     setInterval(
       () => {
         let randInt = Math.floor(Math.random()* this.Quotes.length)

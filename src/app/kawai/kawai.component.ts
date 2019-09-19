@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { appService } from '../services/app.service';
+import { element } from 'protractor';
 
 
 @Component({
@@ -66,6 +67,8 @@ export class KawaiComponent implements OnInit {
     
       this.Score = document.getElementById('appClock').getAttribute('data');
       let appClock = (<HTMLInputElement>document.getElementById('appClock'));
+      let wrapPortal = (<HTMLInputElement>document.getElementById('wrapPortal'));
+      wrapPortal.style.display = "none";
       appClock.style.background = "hotpink";
       appClock.style.backgroundImage = "url(../../assets/kawaiClock.gif)";
 
@@ -188,6 +191,79 @@ export class KawaiComponent implements OnInit {
         }
         
         octoKawai();
+
+        function rocketKawai(){
+          let elem = document.getElementById("rocketKawai"); 
+          
+          let baseHeight = Number(elem.style.height);
+          
+
+          let posLeft = -21;
+
+          let animeID = setInterval(frame,30)
+          let animeID2 = null;
+
+          function frame(){
+
+            if (posLeft === 199)
+            {
+               clearInterval(animeID);
+
+
+               
+               setTimeout(function(){
+
+                 animeID2 = setInterval(frame2,50)
+
+               },9000)
+
+               
+               
+              let posTop = -21;
+              let posLeft = 199;
+
+               function frame2()
+               {
+                
+                if(posLeft === 1 && posTop === 68)
+                {
+                  clearInterval(animeID2);
+                }
+
+                if(posLeft > 1)
+                {
+                  posLeft = posLeft - 2;
+
+                  elem.style.left = posLeft + "vh";
+                  
+                }
+
+                if(posTop < 68)
+                {
+                  posTop++;
+                  elem.style.top = posTop + "vh";
+                }
+                
+
+
+               }
+            }
+
+            else
+            {
+              posLeft++;
+
+              elem.style.left = posLeft + "vh";
+
+            }
+
+          }
+          
+         
+          
+        }
+
+        rocketKawai();
   }
 
 

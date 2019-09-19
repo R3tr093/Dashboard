@@ -17,6 +17,7 @@ import localeFrExtra from '@angular/common/locales/extra/fr';
 import { CmdComponent } from './cmd/cmd.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { KawaiComponent } from './kawai/kawai.component';
+import { PortalComponent } from './portal/portal.component';
 
 const appRoutes: Routes = [
   { path: '',component: HomeComponent },
@@ -36,7 +37,8 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     BoxComponent,
     CmdComponent,
     NotFoundComponent,
-    KawaiComponent
+    KawaiComponent,
+    PortalComponent
   
   ],
   imports: [

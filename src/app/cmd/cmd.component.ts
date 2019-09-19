@@ -164,21 +164,25 @@ export class CmdComponent implements OnInit {
 
           function hidePortal() {
            
-            document.getElementById("kawaiPortal").style.display = "none";
+            document.getElementById("wrapPortal").style.display = "none";
+            
             
           }
+
           if(command === "portal kawai")
           
           {
-            hidePortal();
+            
             document.getElementById('main').style.display = "none";
+            document.getElementById('spacePortal').style.display = "none";
             document.getElementById('wrapPortal').style.display = "block";
             document.getElementById('tips').textContent = " Portal for kawai world is ready ! ";
             document.getElementById('kawaiPortal').style.display = "block";
             
             document.getElementById('kawaiPortal').addEventListener('click',function(){
              
-         
+              hidePortal();
+
               let badges = document.getElementsByClassName('badgesBoxs');
              
              for(let i = 0; i < badges.length; i++)
@@ -198,11 +202,56 @@ export class CmdComponent implements OnInit {
 
           }
 
+          if(command === "portal space")
+          
+          {
+            hidePortal();
+            document.getElementById('kawai').style.display = "none";
+            document.getElementById('wrapPortal').style.display = "block";
+            document.getElementById('kawaiPortal').style.display = "none";
+            document.getElementById('tips').textContent = " Portal for deep space is ready ! ";
+            document.getElementById('spacePortal').style.display = "block";
+            
+            document.getElementById('spacePortal').addEventListener('click',function(){
+             
+         
+              let badges = document.getElementsByClassName('badgesBoxs');
+             
+             for(let i = 0; i < badges.length; i++)
+             {
+              let target = (<HTMLInputElement>document.getElementsByClassName('badgesBoxs')[i]);
+              target.style.backgroundImage = "url('../assets/code.png')";
+              target.style.backgroundColor = "none";
+              target.style.borderTop = "cornflowerblue 2px solid";
+              target.style.boxShadow = "none";
+
+             
+             }
+             
+
+            })
+
+
+          }
+
           if(command === "portal delete")
           {
-            document.getElementById('main').style.display = "flex";
+            let main = document.getElementById('main');
+
+            if(main !== null)
+            {
+              main.style.display = "flex";        
+            }
+
+            let kawai = document.getElementById('kawai');
+
+           if(kawai !== null) 
+           {
+            kawai.style.display = "flex";         
+           }
+
             document.getElementById('wrapPortal').style.display = "none";
-            hidePortal();
+          
 
           }
 
@@ -220,6 +269,5 @@ export class CmdComponent implements OnInit {
     }
 
   });
-
  }
 }
