@@ -9,18 +9,6 @@
     z-index: 50;
 }
 
-
-#quotesBox
-{
-    position: absolute;
-    top: 95%;
-    font-style: italic;
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    font-size: 26px;
-
-}
-
 #appClock
 {
   display: none;
@@ -38,52 +26,6 @@
 {
   background: url('../../assets/code.jpg');  
   background-size: cover;
-}
-
-#wrapPortal
-{
-    position: absolute;
-    top: 35%;
-    left: 20%;
-    display: none;
-}
-
-.portal
-{
-    margin-left: 30px;
-    margin-bottom: 20px;
-}
-.portalLink
-{
-    
-    opacity: 0;
-    animation-name: opacityEffect;
-    animation-delay: 5s;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
-
-#tips
-{
-    font-size: 2vh;
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
-    color: yellow;
-    text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #0ff,
-    0 0 80px #0ff,
-    0 0 90px #0ff,
-    0 0 100px #0ff,
-    0 0 150px #0ff;
-    opacity: 0;
-    animation-name: opacityEffect;
-    animation-delay: 5s;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-
 }
 
 @keyframes opacityEffect {
