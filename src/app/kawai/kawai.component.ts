@@ -12,6 +12,92 @@ export class KawaiComponent implements OnInit {
   Quotes : any[];
   Jokes : any[];
   Score : any;
+  isPonpon : boolean;
+
+
+  Boom() {
+    let element = document.getElementById('octoKawai');
+    
+    this.Score = Number(document.getElementById('appClock').getAttribute('data'));
+
+
+    this.Score = this.Score + 10;
+
+    document.getElementById('appClock').setAttribute('data',String(this.Score));
+
+
+    document.getElementById('appClock').textContent = String(this.Score)
+
+    let audio = new Audio('../../assets/bubble.mp3');
+    audio.play();
+
+    element.setAttribute('src','../../assets/bubble.gif');
+    setTimeout(function() {
+      element.style.display = "none";
+
+    },2500)
+
+  }
+
+  Boom2() {
+    let element = document.getElementById('rocketKawai');
+    
+    this.Score = Number(document.getElementById('appClock').getAttribute('data'));
+
+
+    this.Score = this.Score + 30;
+
+    document.getElementById('appClock').setAttribute('data',String(this.Score));
+
+
+    document.getElementById('appClock').textContent = String(this.Score)
+
+    let audio = new Audio('../../assets/bubble.mp3');
+    audio.play();
+
+    element.setAttribute('src','../../assets/bubble.gif');
+    setTimeout(function() {
+      element.style.display = "none";
+
+      
+
+    },2500)
+
+  }
+
+  ponpon() {
+    
+    function playMusic(src,element) {
+      element.src = src;
+      element.play();
+    }
+    function pauseMusic(element) {
+      element.pause();
+    }
+
+    if(this.isPonpon)
+    {
+       pauseMusic(document.getElementById('audioElt'))
+       this.isPonpon = false;
+ 
+       
+    }
+
+    else if(!this.isPonpon)
+    {
+
+      let audio = document.getElementById('audioElt');
+      let audioSrc =  '../assets/ponpon.mp3';
+      playMusic(audioSrc,audio);
+      this.isPonpon = true;
+     
+    }
+
+    
+
+    
+    
+  }
   
   Boxs = [
     {
@@ -53,6 +139,7 @@ export class KawaiComponent implements OnInit {
     this.Quotes = appService.Quotes;
     this.Jokes = appService.Jokes;
     this.Score = appService.Score;
+    this.isPonpon = false;
  
   }
 
@@ -114,6 +201,8 @@ export class KawaiComponent implements OnInit {
 
         function octoKawai() {
           let elem = document.getElementById("octoKawai");   
+          elem.setAttribute('src','../../assets/kawaiOctopus.gif');
+          elem.style.display = "block";
           
           let posTop = -20;
 
@@ -198,7 +287,9 @@ export class KawaiComponent implements OnInit {
         octoKawai();
 
         function rocketKawai(){
-          let elem = document.getElementById("rocketKawai"); 
+          let elem = document.getElementById("rocketKawai");    
+          elem.setAttribute('src','../../assets/rocketKawai.gif');
+          elem.style.display = "block";
           
           elem.style.left = "-21vh";
           elem.style.top = "-13vh";
