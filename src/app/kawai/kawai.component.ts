@@ -87,8 +87,11 @@ export class KawaiComponent implements OnInit {
   
           let animKeys = ["wooble","flip","rotateIn","zoomIn","rollIn"];
           let colorKeys = ["hotpink","red","#1c52a3"];
+          
           let randomKey = Math.floor(Math.random() * animKeys.length) 
-          element.style.color = colorKeys[randomKey];
+          let randomColor = Math.floor(Math.random() * colorKeys.length) 
+         
+          element.style.color = colorKeys[randomColor];
   
   
           element.textContent = this.Quotes[randInt].quote;
