@@ -81,6 +81,10 @@ export class KawaiComponent implements OnInit {
 
   ponpon() {
     
+
+    let repeatPonPon = null;
+
+
     function playMusic(src,element) {
       element.src = src;
       element.play();
@@ -99,6 +103,7 @@ export class KawaiComponent implements OnInit {
        elem.style.display = "none";
        let elem2 = document.getElementById("miku");   
        elem2.setAttribute('src','../../assets/kawaiMiku2.gif');
+       clearInterval(repeatPonPon)
  
        
     }
@@ -113,6 +118,12 @@ export class KawaiComponent implements OnInit {
       let elem2 = document.getElementById("miku");   
       elem2.setAttribute('src','../../assets/kawaiMiku.gif');
       elem.style.display = "block";
+
+      repeatPonPon = setInterval(function() {
+        let audio = document.getElementById('audioElt');
+        let audioSrc =  '../assets/ponpon.mp3';
+        playMusic(audioSrc,audio);
+      },250000)
 
       
 
