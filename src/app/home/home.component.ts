@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
     this.Quotes = appService.Quotes;
     this.Jokes = appService.Jokes;
     this.Score = appService.Score;
-
+    this.Score = document.getElementById('appClock').getAttribute('data');
 
     
 
@@ -124,11 +124,13 @@ export class HomeComponent implements OnInit {
   Boom() {
     let element = document.getElementById('rocketEffect');
     
+    this.Score = Number(document.getElementById('appClock').getAttribute('data'));
+
+
     this.Score = this.Score + 10;
 
     document.getElementById('appClock').setAttribute('data',String(this.Score));
 
-    console.log("rocket destroyed ");
 
     document.getElementById('appClock').textContent = String(this.Score)
 
@@ -151,6 +153,8 @@ export class HomeComponent implements OnInit {
   BoomCat()
   {
     let element = document.getElementById('catEffect');
+
+    this.Score = Number(document.getElementById('appClock').getAttribute('data'));
     
     this.Score = this.Score + 100;
 

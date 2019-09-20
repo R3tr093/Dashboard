@@ -16,6 +16,7 @@
 #quotesBox
 {
     font-family: 'Playfair Display', serif;
+    font-size: 3vh;
 }
 
 .boxs
@@ -38,7 +39,7 @@
     width: 10vh;
     height: auto;
     position: absolute;
-    top: -21vh;
+    top: -13vh;
     left: -21vh;
     z-index: 0;
 }
@@ -46,8 +47,35 @@
 #miku
 {
     position : absolute;
-    left: 0vh;
+    left: -1%;
     top: 0vh;
+    width: 15vh;
+    height: auto;
+}
+
+#rainbow
+{
+    position : absolute;
+    left: 3%;
+    top: -10%;
+    width: 40vh;
+    height: auto;
+}
+
+#panda
+{
+    position : absolute;
+    left: 92%;
+    top: 40vh;
+    width: 15vh;
+    height: auto;
+}
+
+#mush
+{
+    position : absolute;
+    left: 2%;
+    top: 90%;
     width: 15vh;
     height: auto;
 }

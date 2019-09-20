@@ -91,7 +91,9 @@ export class KawaiComponent implements OnInit {
           let randomKey = Math.floor(Math.random() * animKeys.length) 
           let randomColor = Math.floor(Math.random() * colorKeys.length) 
          
+          element.style.fontFamily =" 'Playfair Display', serif;";
           element.style.color = colorKeys[randomColor];
+          
   
   
           element.textContent = this.Quotes[randInt].quote;
@@ -198,17 +200,19 @@ export class KawaiComponent implements OnInit {
         function rocketKawai(){
           let elem = document.getElementById("rocketKawai"); 
           
-          let baseHeight = Number(elem.style.height);
+          elem.style.left = "-21vh";
+          elem.style.top = "-13vh";
           
 
           let posLeft = -21;
 
           let animeID = setInterval(frame,30)
           let animeID2 = null;
+          let animeID3 = null;
 
           function frame(){
 
-            if (posLeft === 199)
+            if (posLeft === 170)
             {
                clearInterval(animeID);
 
@@ -222,15 +226,54 @@ export class KawaiComponent implements OnInit {
 
                
                
-              let posTop = -21;
-              let posLeft = 199;
+              let posTop = -13;
+              let posLeft = 170;
 
                function frame2()
                {
                 
-                if(posLeft === 1 && posTop === 68)
+                if(posLeft === 0 && posTop === 68)
                 {
                   clearInterval(animeID2);
+
+
+                  setTimeout(function(){
+
+                    animeID3 = setInterval(frame3,50)
+   
+                  },9000)
+
+
+                  let posLeft = 0;
+                  let posTop = 68;
+
+                  function  frame3(){
+                    
+                    if(posLeft === 200 && posTop === 75)
+                    {
+                        clearInterval(animeID3);
+
+                        setTimeout(function(){
+                          rocketKawai();
+                        },15000)
+                    }
+
+                    else
+                    {
+                      
+                      if(posLeft % 12 === 0 && posTop < 75)
+                      {
+                        posTop++;
+                      }
+
+                      posLeft++;
+                      elem.style.left = posLeft + "vh";
+                      elem.style.top = posTop + "vh";
+                    }
+
+                  }
+
+
                 }
 
                 if(posLeft > 1)

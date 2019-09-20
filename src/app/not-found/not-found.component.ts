@@ -17,6 +17,9 @@ export class NotFoundComponent implements OnInit {
 
   ngOnInit() {
     
+    document.getElementById('kawaiPortal').style.display = "none";
+    
+
   }
 
 }
