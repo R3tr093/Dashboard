@@ -51,6 +51,17 @@
     top: 0vh;
     width: 15vh;
     height: auto;
+    z-index: 100;
+}
+
+#music
+{
+    position : absolute;
+    left: 0%;
+    top: -4vh;
+    width: 5vh;
+    height: auto;
+    display: none;
 }
 
 #rainbow
@@ -75,7 +86,7 @@
 {
     position : absolute;
     left: 2%;
-    top: 90%;
+    top: 93%;
     width: 15vh;
     height: auto;
 }

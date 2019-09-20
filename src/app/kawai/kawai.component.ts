@@ -23,6 +23,13 @@ export class KawaiComponent implements OnInit {
 
     this.Score = this.Score + 10;
 
+    let bonus = document.getElementById('miku').getAttribute('src');
+
+    if(bonus === "../../assets/kawaiMiku.gif")
+    {
+      this.Score = this.Score + 100;
+    }
+
     document.getElementById('appClock').setAttribute('data',String(this.Score));
 
 
@@ -46,6 +53,13 @@ export class KawaiComponent implements OnInit {
 
 
     this.Score = this.Score + 30;
+
+    let bonus = document.getElementById('miku').getAttribute('src');
+
+    if(bonus === "../../assets/kawaiMiku.gif")
+    {
+      this.Score = this.Score + 100;
+    }
 
     document.getElementById('appClock').setAttribute('data',String(this.Score));
 
@@ -71,6 +85,9 @@ export class KawaiComponent implements OnInit {
       element.src = src;
       element.play();
     }
+
+    let elem = document.getElementById('music');
+
     function pauseMusic(element) {
       element.pause();
     }
@@ -79,6 +96,9 @@ export class KawaiComponent implements OnInit {
     {
        pauseMusic(document.getElementById('audioElt'))
        this.isPonpon = false;
+       elem.style.display = "none";
+       let elem2 = document.getElementById("miku");   
+       elem2.setAttribute('src','../../assets/kawaiMiku2.gif');
  
        
     }
@@ -90,14 +110,15 @@ export class KawaiComponent implements OnInit {
       let audioSrc =  '../assets/ponpon.mp3';
       playMusic(audioSrc,audio);
       this.isPonpon = true;
+      let elem2 = document.getElementById("miku");   
+      elem2.setAttribute('src','../../assets/kawaiMiku.gif');
+      elem.style.display = "block";
+
+      
+
      
     }
-
-    
-
-    
-    
-  }
+}
   
   Boxs = [
     {
@@ -159,6 +180,8 @@ export class KawaiComponent implements OnInit {
       appClock.style.background = "hotpink";
       appClock.style.backgroundImage = "url(../../assets/kawaiClock.gif)";
 
+
+      
 
       setInterval(
         () => {

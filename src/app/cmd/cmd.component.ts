@@ -36,7 +36,6 @@ export class CmdComponent implements OnInit {
 
        let val = element.style.display;
    
-   
        if(val === "" || val === "none")
        {
          element.style.display = "block";
@@ -199,6 +198,14 @@ export class CmdComponent implements OnInit {
 
             })
 
+            let audioPortal = document.getElementById('audioElt');
+
+            if(audioPortal.getAttribute('src') === "../assets/ponpon.mp3" )
+            {
+              audioPortal.setAttribute('src',"prout")
+            }
+        
+
 
           }
 
@@ -224,6 +231,14 @@ export class CmdComponent implements OnInit {
               target.style.backgroundColor = "none";
               target.style.borderTop = "cornflowerblue 2px solid";
               target.style.boxShadow = "none";
+
+              let audioPortal = document.getElementById('audioElt');
+
+              if(audioPortal.getAttribute('src') === "../assets/ponpon.mp3" )
+              {
+                audioPortal.setAttribute('src',"prout")
+              }
+          
 
              
              }
