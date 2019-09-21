@@ -62,6 +62,7 @@ export class CmdComponent implements OnInit {
         function playMusic(src,element) {
           element.src = src;
           element.play();
+          element.loop = false;
         }
 
         function resumeMusic(element){

@@ -88,12 +88,14 @@ export class KawaiComponent implements OnInit {
     function playMusic(src,element) {
       element.src = src;
       element.play();
+      element.loop = true; 
     }
 
     let elem = document.getElementById('music');
 
     function pauseMusic(element) {
       element.pause();
+      element.loop = false; 
     }
 
     if(this.isPonpon)
@@ -118,12 +120,7 @@ export class KawaiComponent implements OnInit {
       let elem2 = document.getElementById("miku");   
       elem2.setAttribute('src','../../assets/kawaiMiku.gif');
       elem.style.display = "block";
-
-      repeatPonPon = setInterval(function() {
-        let audio = document.getElementById('audioElt');
-        let audioSrc =  '../assets/ponpon.mp3';
-        playMusic(audioSrc,audio);
-      },250000)
+      
     }
 }
   
