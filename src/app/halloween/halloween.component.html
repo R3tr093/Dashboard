@@ -1,0 +1,22 @@
+
+
+<div id="halloween">
+
+    <app-box class="boxs" *ngFor="let box of Boxs; let i = index"
+          
+    [index]="i"
+
+    [title]="box.title"
+
+    [link]="box.link"
+
+    [id]="i"
+    >
+
+</app-box>
+
+<p id="quotesBox"></p>
+
+</div>
+
+<app-portal></app-portal>

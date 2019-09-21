@@ -18,10 +18,12 @@ import { CmdComponent } from './cmd/cmd.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { KawaiComponent } from './kawai/kawai.component';
 import { PortalComponent } from './portal/portal.component';
+import { HalloweenComponent } from './halloween/halloween.component';
 
 const appRoutes: Routes = [
   { path: '',component: HomeComponent },
   { path: 'kawai', component: KawaiComponent },
+  { path: 'halloween', component: HalloweenComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -38,7 +40,8 @@ registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
     CmdComponent,
     NotFoundComponent,
     KawaiComponent,
-    PortalComponent
+    PortalComponent,
+    HalloweenComponent
   
   ],
   imports: [

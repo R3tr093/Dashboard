@@ -172,8 +172,18 @@ export class CmdComponent implements OnInit {
           
           {
             
-            document.getElementById('main').style.display = "none";
+            if(document.getElementById('halloween') !== null)
+            {
+              document.getElementById('halloween').style.display = "none";
+            }
+
+            if(document.getElementById('main') !== null)
+            {
+              document.getElementById('main').style.display = "none";
+            }
+
             document.getElementById('spacePortal').style.display = "none";
+            document.getElementById('halloweenPortal').style.display = "none";
             document.getElementById('wrapPortal').style.display = "block";
             document.getElementById('tips').textContent = " Portal for kawai world is ready ! ";
             document.getElementById('kawaiPortal').style.display = "block";
@@ -213,7 +223,19 @@ export class CmdComponent implements OnInit {
           
           {
             hidePortal();
+
+            if(document.getElementById('kawai') !== null)
+            {
+              document.getElementById('kawai').style.display = "none";
+            }
+
+            if(document.getElementById('halloween') !== null)
+            {
+              document.getElementById('halloween').style.display = "none";
+            }
+
             document.getElementById('kawai').style.display = "none";
+            document.getElementById('halloweenPortal').style.display = "none";
             document.getElementById('wrapPortal').style.display = "block";
             document.getElementById('kawaiPortal').style.display = "none";
             document.getElementById('tips').textContent = " Portal for deep space is ready ! ";
@@ -230,6 +252,57 @@ export class CmdComponent implements OnInit {
               target.style.backgroundImage = "url('../assets/code.jpg')";
               target.style.backgroundColor = "none";
               target.style.borderTop = "cornflowerblue 2px solid";
+              target.style.boxShadow = "none";
+
+              let audioPortal = document.getElementById('audioElt');
+
+              if(audioPortal.getAttribute('src') === "../assets/ponpon.mp3" )
+              {
+                audioPortal.setAttribute('src',"prout")
+              }
+          
+
+             
+             }
+             
+
+            })
+
+
+          }
+
+          if(command === "portal halloween")
+          
+          {
+            hidePortal();
+
+            if(document.getElementById('kawai') !== null)
+            {
+              document.getElementById('kawai').style.display = "none";
+            }
+
+            if(document.getElementById('main') !== null)
+            {
+              document.getElementById('main').style.display = "none";
+            }
+           
+            document.getElementById('wrapPortal').style.display = "block";
+            document.getElementById('kawaiPortal').style.display = "none";
+            document.getElementById('spacePortal').style.display = "none";
+            document.getElementById('tips').textContent = " Portal for Halloween Town is ready ! ";
+            document.getElementById('halloweenPortal').style.display = "block";
+            
+            document.getElementById('halloweenPortal').addEventListener('click',function(){
+             
+         
+             let badges = document.getElementsByClassName('badgesBoxs');
+             
+             for(let i = 0; i < badges.length; i++)
+             {
+              let target = (<HTMLInputElement>document.getElementsByClassName('badgesBoxs')[i]);
+              target.style.backgroundImage = "url('../assets/code.jpg')";
+              target.style.backgroundColor = "none";
+              target.style.borderTop = "red 2px solid";
               target.style.boxShadow = "none";
 
               let audioPortal = document.getElementById('audioElt');
