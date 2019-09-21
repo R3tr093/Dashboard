@@ -147,7 +147,16 @@ export class CmdComponent implements OnInit {
           {            
             let audio = document.getElementById('audioElt');
             pauseMusic(audio);
-            render.innerHTML = "<p> Music just stopped !  </p>"
+            render.innerHTML = "<p> Music just stopped !  </p>";
+            if(audio.getAttribute('src') === "../assets/ponpon.mp3" )
+            {
+              audio.setAttribute('src',"prout")
+            }
+
+            if(document.getElementById('miku') !==  null )
+            {
+              document.getElementById('miku').setAttribute('src','../../assets/kawaiMiku2.gif')
+            }
           }
 
           if(command === "score")

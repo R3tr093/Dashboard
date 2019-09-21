@@ -124,10 +124,6 @@ export class KawaiComponent implements OnInit {
         let audioSrc =  '../assets/ponpon.mp3';
         playMusic(audioSrc,audio);
       },250000)
-
-      
-
-     
     }
 }
   
